@@ -1,11 +1,9 @@
-<html>
-    <head>
-        <title>Token search site</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Token Search Site</a></h1>
-        </div>
+{% extends 'tokens_app/base.html' %}
 
-    </body>
-</html>
+{% block content %}
+    <form action="/search_results/" method="get">
+        {% csrf_token %}
+        <label for="token">Token: <input type="search" id="token", name="token"></label>
+        <input type="submit" value="Search">
+    </form>
+{% endblock %}

@@ -18,3 +18,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Get(models.Model):
+    token = models.TextField()
+
+    def __str__(self) -> str:
+        return self.token

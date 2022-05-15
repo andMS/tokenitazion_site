@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>Token search site</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Token Search Engine</a></h1>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+
+    </body>
+</html>
