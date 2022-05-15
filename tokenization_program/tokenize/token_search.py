@@ -1,12 +1,15 @@
 import os
 import time
 
+FOLDER = os.path.join(os.path.dirname(__file__), '../..')
 
 def search_token(tokens):
+    print('folder is:')
+    print(FOLDER)
     search_dict = {'found': {}, 'not_found': {} }
-    posting_file = 'resources\\generated\\posting_file.txt'
-    dictionary_path = 'resources\\generated\\token_dictionary.txt'
-    docs_id_path = 'resources\\generated\\documents_id.txt'
+    posting_file = os.path.join(FOLDER,'resources\\generated\\posting_file.txt')
+    dictionary_path = os.path.join(FOLDER, 'resources\\generated\\token_dictionary.txt')
+    docs_id_path = os.path.join(FOLDER,'resources\\generated\\documents_id.txt')
     posting_lines, dictionary_id, posting_weights, document_id = generate_files_dict(posting_file, dictionary_path, docs_id_path)
 
     for token in tokens:
