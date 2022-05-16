@@ -56,6 +56,10 @@ a:hover{
     color:beige;
 }
 
+a{
+    color: white;
+}
+
 label{
     font-size: 25px;
 }
@@ -66,7 +70,8 @@ table{
     padding-top: 50px;
     border-style:groove;
     border-width: 2px;
-    border-color: white
+    border-color: white;
+    margin-bottom: 15%;
 }
 
 th {
@@ -81,7 +86,7 @@ td {
     width: 200px;
     height: 50px;
     text-align: center;
-    background-color: #06526f;
+    background-color: #52a2c2;
 }
 
 .input{

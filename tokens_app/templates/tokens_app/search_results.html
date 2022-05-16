@@ -15,8 +15,8 @@
     {% for val in value %}
     <table>
         <tr>
-            <td width="30%">{{ val.0 }}</td>
-            <td width="30%">{{ val.1 }}</td>
+            <td width="30%"><a href={{ val.0 }}>{{ val.1 }}</a></td>
+            <td width="30%">{{ val.2 }}</td>
         </tr>
     </table>
     {% endfor %}

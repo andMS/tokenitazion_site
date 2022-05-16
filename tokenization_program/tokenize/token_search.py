@@ -4,8 +4,6 @@ import time
 FOLDER = os.path.join(os.path.dirname(__file__), '../..')
 
 def search_token(tokens):
-    print('folder is:')
-    print(FOLDER)
     search_dict = {'found': {}, 'not_found': {} }
     posting_file = os.path.join(FOLDER,'resources/generated/posting_file.txt')
     dictionary_path = os.path.join(FOLDER, 'resources/generated/token_dictionary.txt')
@@ -20,10 +18,8 @@ def search_token(tokens):
 
 
 def generate_ocurrences_dict(token, posting_lines, dictionary_id, posting_weights, document_id):
-    start_time = time.time()
     key = ''
     ocurrences = {}
-    elements = 0
     try:
         positions = dictionary_id[token]
         ocurrences[token] = []
