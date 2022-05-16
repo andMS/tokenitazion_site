@@ -3,7 +3,7 @@
 {% block content %}
     <form action="/search_results/" method="get">
         {% csrf_token %}
-        <label for="token">Token: <input type="search" id="token", name="token"></label>
-        <input type="submit" value="Search">
+        <label for="token">Token: <input type="search" id="token", name="token" style="color:black"></label>
+        <input type="submit" value="Search" class="button_form">
     </form>
 {% endblock %}

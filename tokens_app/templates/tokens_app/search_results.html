@@ -1,30 +1,28 @@
 {% extends 'tokens_app/base.html' %}
 
 {% block content %}
-    <h1>Resultados de busqueda: </h1>
+    <h1 class="results">Resultados de busqueda: </h1>
     {% for key, values in results.items %}
     {% for k, value in values.items %}
-    <h2>Token: {{ k }}</h2>
+    <h2 class="token_title">Token: {{ k }}</h2>
     {% if key != "not_found" %}
     <table>
         <tr>
-            <th>Documento</th>
-            <th>Peso </th>
-            <th>Tiempo</th>
+            <th width="30%">Documento</th>
+            <th width="30%">Peso </th>
         </tr>
     </table>
     {% for val in value %}
     <table>
         <tr>
-            <td>{{ val.0 }}</td>
-            <td>{{ val.1 }}</td>
-            <td>ejemplo</td>
+            <td width="30%">{{ val.0 }}</td>
+            <td width="30%">{{ val.1 }}</td>
         </tr>
     </table>
     {% endfor %}
     
     {% else %}
-    <p>No se encontraron resultados para el token</p>
+    <p class="negative">No se encontraron resultados para el token</p>
     {% endif %}
     {% endfor %}
     {% endfor %}
